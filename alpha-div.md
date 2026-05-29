@@ -27,8 +27,11 @@ An exercice to follow.
 #### Calculate alpha diversity
 
 what does the alpha diversity measure ?
+
 a) diversity between different habitats
+
 b) diversity within a single community or habitat
+
 c) a totaal number of ecosystems in the region
 
 ::: solution
