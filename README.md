@@ -7,5 +7,5 @@ You can view this lesson at this link https://microbiome.github.io/microbiome-le
 Authors of this lesson are listed in [CITATION.cff](./CITATION.cff). 
 
 ## Current maintainers 
-Tuomas Borman(https://github.com/TuomasBorman)
+Tuomas Borman (https://github.com/TuomasBorman)
 Hedia Tnani (https://github.com/HediaTnani)
