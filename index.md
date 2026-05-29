@@ -12,3 +12,9 @@ After attending this course, learners will be able to:
 * Estimate alpha diversity indices (Shannon, Faith's, evenness and richness).
 * Estimate beta diversity by applying Principal Coordinate Analysis (PCoA).
 * Performing differential abundance analysis by utilizing Maaslin3.
+
+## Prerequisite knowledge
+- Basic understanding of microbiome concepts
+- Basic R programming
+- familiarity with data sctructures and tabular data in R
+- Basic understanding of statistics
