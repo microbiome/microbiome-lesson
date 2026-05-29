@@ -8,4 +8,5 @@ Authors of this lesson are listed in [CITATION.cff](./CITATION.cff).
 
 ## Current maintainers 
 Tuomas Borman (https://github.com/TuomasBorman)
+
 Hedia Tnani (https://github.com/HediaTnani)
