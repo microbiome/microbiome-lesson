@@ -67,6 +67,7 @@ contact: 'tvborm@utu.fi'
 
 # Order of episodes in your lesson
 episodes: 
+- alpha-div.md
 - introduction.md
 
 # Information for Learners
