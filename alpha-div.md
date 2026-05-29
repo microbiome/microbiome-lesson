@@ -18,7 +18,26 @@ exercises: 0 # exercise time in minutes
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. 
+Some content here ....
+
+An exercice to follow.
+
+::: challenge
+
+#### Calculate alpha diversity
+
+Calculate alpha diversity 
+
+::: solution
+
+Here is some code to solve this task
+
+:::
+
+:::
+
+
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Use `addAlpha` function to calculate the alpha diversity
