@@ -1,5 +1,5 @@
 # Microbiome lesson
-This lesson is a template lesson that uses [The Carpentries Workbench][workbench]. 
+This lesson is a template lesson that uses [The Carpentries Workbench](https://github.com/carpentries/workbench-template-md).
 You can view this lesson at this link https://microbiome.github.io/microbiome-lesson/
 
 
