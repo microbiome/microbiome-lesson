@@ -25,7 +25,7 @@
     <div class="col-md-8">
       <div class="large-logo">
         <a href="index.html">
-        <img id="incubator-logo" alt="Lesson Description" src="../assets/images/incubator-logo.svg"></a>
+        <img id="incubator-logo" alt="Microbiome data science with R/Bioconductor" src="../assets/images/incubator-logo.svg"></a>
 
         <span class="badge text-bg-danger">
           <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
@@ -78,7 +78,7 @@
     </button>
     <div class="nav-logo">
       <a href="index.html">
-      <img class="small-logo" alt="Lesson Description" src="../assets/images/incubator-logo-sm.svg"></a>
+      <img class="small-logo" alt="Microbiome data science with R/Bioconductor" src="../assets/images/incubator-logo-sm.svg"></a>
     </div>
     <div class="lesson-title-md">
       Microbiome data science with R/Bioconductor
@@ -205,7 +205,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="alpha-div.html">1. Calculate alpha diversity</a>
+        <a href="01-intro-microbiome.html">1. Introduction to microbiome data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -214,7 +214,88 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="introduction.html">2. Using Markdown</a>
+        <a href="02-upstream.html">2. From samples to tables</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-setup.html">3. RStudio project and experimental data</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-import-treese.html">4. Importing data into TreeSummarizedExperiment</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-explore-prepare.html">5. Exploring and preparing microbiome data</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-alpha-diversity.html">6. Alpha diversity</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07-beta-diversity.html">7. Beta diversity</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="08-differential-abundance.html">8. Differential abundance and prevalence analysis</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="09-machine-learning.html">9. Machine learning: predicting an outcome</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush11">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading11">
+        <a href="10-capstone.html">10. Capstone: analyse a new dataset</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush12">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading12">
+        <a href="11-next-steps.html">11. Next steps</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -287,7 +368,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2023-03-16 |
+        <p>Last updated on 2026-10-13 |
 
         <a href="https://github.com/microbiome/microbiome-lesson/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -301,12 +382,375 @@
 
         
 <section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
-<hr class="half-width"><p>This is a placeholder file. Please add content here.</p>
-<!--
+<hr class="half-width"><dl><dt>Accessor function</dt>
+<dd>
+A function that gets or sets one part of an object, for example
+<code>assay()</code>, <code>rowData()</code> or <code>colData()</code>
+for a <code>TreeSummarizedExperiment</code>.
+</dd>
+<dt>Agglomeration</dt>
+<dd>
+Combining taxa that belong to the same higher taxonomic group, for
+example all species of one genus, by summing their abundances.
+</dd>
+<dt>Aitchison distance</dt>
+<dd>
+The Euclidean distance between log-ratio-transformed samples. Suited to
+relative data. With rclr values it is called the robust Aitchison
+distance, and a PCA of rclr values uses it.
+</dd>
+<dt>Alpha diversity</dt>
+<dd>
+The diversity within a single sample. See also <em>richness</em>,
+<em>evenness</em> and <em>Shannon index</em>.
+</dd>
+<dt>Alternative experiment (altExp)</dt>
+<dd>
+A complete TreeSE stored inside another TreeSE, with the same samples.
+Used to keep the data at several taxonomic ranks in one object.
+</dd>
+<dt>Amplicon sequencing</dt>
+<dd>
+Sequencing one marker gene, such as 16S rRNA, to find out which bacteria
+are present. See also <em>shotgun metagenomics</em>.
+</dd>
+<dt>ASV / OTU</dt>
+<dd>
+Amplicon sequence variant / operational taxonomic unit: groups of
+identical / very similar amplicon reads that stand in for taxa.
+</dd>
+<dt>Assay</dt>
+<dd>
+A table of values (for example counts) stored in a
+<code>TreeSummarizedExperiment</code>. Rows are taxa and columns are
+samples.
+</dd>
+<dt>AUC (area under the ROC curve)</dt>
+<dd>
+A measure of how well a model separates two groups: 0.5 is a coin flip,
+1 is perfect.
+</dd>
+<dt>Batch effect</dt>
+<dd>
+Differences between samples that come from processing them in different
+groups (batches), for example with different DNA extraction kits or
+sequencing runs, rather than from biology.
+</dd>
+<dt>Beta diversity</dt>
+<dd>
+The differences in composition between samples.
+</dd>
+<dt>Bray–Curtis dissimilarity</dt>
+<dd>
+A common measure of how different two samples are, from 0 (identical
+composition) to 1 (no shared taxa).
+</dd>
+<dt>CLR (centred log-ratio) transformation</dt>
+<dd>
+A transformation that compares each taxon to the average taxon (the
+geometric mean) of the same sample, on a log scale. It cannot handle
+zeros, which is why this lesson uses <em>rclr</em>.
+</dd>
+<dt>Clustering</dt>
+<dd>
+Grouping samples so that samples in the same cluster are similar,
+without using the sample information (an <em>unsupervised</em>
+analysis).
+</dd>
+<dt>Coefficient</dt>
+<dd>
+A number from a statistical model that tells how large a difference is
+and in which direction. Also called the <em>effect size</em>.
+</dd>
+<dt>Compositional data</dt>
+<dd>
+Data in which only the shares carry information, because the values of a
+sample add up to a fixed total (1 or 100 %). If one taxon grows, the
+shares of all the others shrink.
+</dd>
+<dt>Confounding</dt>
+<dd>
+When a second variable (for example location) differs between the study
+groups, so that its effect cannot be told apart from the effect of
+interest.
+</dd>
+<dt>Cross-validation</dt>
+<dd>
+Splitting the training data into parts repeatedly, so that a model is
+always evaluated on data it was not trained on.
+</dd>
+<dt>dbRDA (distance-based redundancy analysis)</dt>
+<dd>
+An ordination constrained by sample variables, used to estimate how much
+each variable explains of the differences between samples.
+</dd>
+<dt>Detection threshold</dt>
+<dd>
+The minimum abundance at which a taxon is counted as present.
+</dd>
+<dt>Differential abundance analysis (DAA)</dt>
+<dd>
+Testing each taxon for a difference in abundance between groups.
+</dd>
+<dt>Differential prevalence</dt>
+<dd>
+A difference between groups in how often a taxon is present.
+</dd>
+<dt>Dissimilarity</dt>
+<dd>
+A number that tells how different two samples are. A dissimilarity
+matrix holds it for every pair of samples.
+</dd>
+<dt>Evenness</dt>
+<dd>
+How equally common the taxa in a sample are.
+</dd>
+<dt>Faith’s phylogenetic diversity</dt>
+<dd>
+The total branch length of the phylogenetic tree covered by the taxa in
+a sample.
+</dd>
+<dt>False discovery rate (FDR)</dt>
+<dd>
+The expected share of false positives among the results called
+significant. A q-value threshold of 0.05 keeps the FDR at 5 %.
+</dd>
+<dt>Feature importance</dt>
+<dd>
+How much a machine learning model relies on each feature (here, each
+taxon) for its predictions. Random forests measure it, for example, by
+how much a feature improves the splits of the trees.
+</dd>
+<dt>Heteroscedastic</dt>
+<dd>
+Data whose spread changes with its level. Microbiome abundances are
+heteroscedastic: low and high abundances vary in very different ways.
+</dd>
+<dt>Hierarchical clustering</dt>
+<dd>
+A clustering method that joins the most similar samples step by step
+into a tree, which is then cut into clusters.
+</dd>
+<dt>Hyperparameter</dt>
+<dd>
+A setting of a machine learning model that is chosen before training
+rather than learned from the data, for example <code>mtry</code> of a
+random forest. It is usually chosen by cross-validation.
+</dd>
+<dt>Library size</dt>
+<dd>
+The total number of reads of a sample. Also called <em>sequencing
+depth</em>.
+</dd>
+<dt>Linear model</dt>
+<dd>
+A model that explains a numeric value, such as a taxon’s log relative
+abundance, by one or more variables. A t-test is a linear model with one
+two-group variable.
+</dd>
+<dt>Loading</dt>
+<dd>
+In a PCA, the weight of a taxon on an axis. Taxa with large positive or
+negative loadings drive the separation of samples along that axis.
+</dd>
+<dt>Logistic regression</dt>
+<dd>
+A model for a yes/no outcome, such as whether a taxon is present. Its
+coefficients are changes in the log-odds.
+</dd>
+<dt>Matrix completion</dt>
+<dd>
+A method that fills in missing values of a table using the main patterns
+of the whole table. The rclr transformation uses it to replace zeros.
+</dd>
+<dt>Median comparison</dt>
+<dd>
+MaAsLin 3’s default: the coefficient of a taxon is tested against the
+median coefficient of all taxa rather than against 0, to account for the
+relative nature of the data.
+</dd>
+<dt>Metadata</dt>
+<dd>
+Information about the samples, such as disease status or age. Stored in
+the <code>colData</code> of a <code>TreeSummarizedExperiment</code>.
+</dd>
+<dt>MetaPhlAn</dt>
+<dd>
+A shotgun metagenomics profiler that estimates species abundances from
+marker genes.
+</dd>
+<dt>Microbiome</dt>
+<dd>
+A community of microorganisms together with its environment.
+</dd>
+<dt>Multiple testing correction</dt>
+<dd>
+Adjusting p-values when many tests are performed, to limit the number of
+false positives. The corrected p-value is often called the
+<em>q-value</em>. See also <em>false discovery rate</em>.
+</dd>
+<dt>Ordination</dt>
+<dd>
+A method that draws the samples on a map in which similar samples are
+close to each other.
+</dd>
+<dt>Overfitting</dt>
+<dd>
+When a model learns the training data, including its noise, so well that
+it performs worse on new samples.
+</dd>
+<dt>p-value</dt>
+<dd>
+The probability of a result at least as extreme as the observed one if
+there were no real difference. Small values (usually below 0.05) are
+called significant.
+</dd>
+<dt>Pathway</dt>
+<dd>
+A chain of reactions that makes or breaks down a compound. In shotgun
+data, pathway abundances describe what the community can do.
+</dd>
+<dt>PCA (Principal Component Analysis)</dt>
+<dd>
+An ordination of the values of a table, such as rclr values. It gives
+loadings that show which taxa drive each axis.
+</dd>
+<dt>PCoA (Principal Coordinate Analysis)</dt>
+<dd>
+An ordination method based on a dissimilarity between samples. Also
+called multidimensional scaling (MDS).
+</dd>
+<dt>PERMANOVA</dt>
+<dd>
+A permutation test of whether the centres of groups of samples differ in
+a dissimilarity space. R² is the share of the differences explained.
+</dd>
+<dt>Permutation test</dt>
+<dd>
+A test that shuffles the group labels many times to see how often a
+result as strong as the observed one appears by chance.
+</dd>
+<dt>Phylogenetic tree</dt>
+<dd>
+A tree that shows how the taxa are related through evolution. Stored in
+the <code>rowTree</code> of a TreeSE.
+</dd>
+<dt>Pre-processing (upstream analysis)</dt>
+<dd>
+Turning raw sequencing reads into tables of taxa, usually with tools
+outside R.
+</dd>
+<dt>Prevalence</dt>
+<dd>
+The share of samples in which a taxon is present.
+</dd>
+<dt>Pseudocount</dt>
+<dd>
+A small number added to all values before taking a logarithm, because
+the logarithm of zero is not defined.
+</dd>
+<dt>Random forest</dt>
+<dd>
+A machine learning model made of many decision trees whose votes are
+combined.
+</dd>
+<dt>Rarefaction</dt>
+<dd>
+Randomly subsampling every sample to the same number of reads, to make
+samples with different library sizes comparable.
+</dd>
+<dt>rclr (robust centred log-ratio) transformation</dt>
+<dd>
+A version of the CLR transformation that uses only the non-zero values
+and fills in the zeros by matrix completion, so no pseudocount is
+needed. In the default implementation, all values are replaced by these
+estimates, so single rclr values are estimates, not measurements.
+</dd>
+<dt>Read</dt>
+<dd>
+A short DNA sequence produced by the sequencer. FASTQ files store the
+reads and their quality scores.
+</dd>
+<dt>Reference level</dt>
+<dd>
+The first level of a factor. Model coefficients compare the other levels
+to it.
+</dd>
+<dt>Relative abundance</dt>
+<dd>
+The share of a taxon in a sample. The relative abundances of a sample
+sum to 1.
+</dd>
+<dt>Richness</dt>
+<dd>
+The number of different taxa in a sample.
+</dd>
+<dt>ROC curve</dt>
+<dd>
+A curve that shows, for every cut-off of the predicted probability, the
+sensitivity against the false positive rate. The AUC is the area under
+it.
+</dd>
+<dt>Sensitivity / false positive rate</dt>
+<dd>
+The share of true cases (for example CRC) predicted as cases / the share
+of non-cases (healthy) wrongly predicted as cases.
+</dd>
+<dt>Shannon index</dt>
+<dd>
+A diversity index that combines richness and evenness.
+</dd>
+<dt>Shotgun metagenomics</dt>
+<dd>
+Sequencing all DNA in a sample, as opposed to amplicon sequencing of one
+marker gene such as 16S rRNA.
+</dd>
+<dt>Taxon (plural: taxa)</dt>
+<dd>
+A group of organisms at any taxonomic rank, such as a species, a genus
+or a phylum.
+</dd>
+<dt>Taxonomic rank</dt>
+<dd>
+A level in the classification of organisms: kingdom, phylum, class,
+order, family, genus, species.
+</dd>
+<dt>Training data / test data</dt>
+<dd>
+The samples a model learns from / the samples kept aside to evaluate it.
+</dd>
+<dt>Transformation</dt>
+<dd>
+Changing all values of a table with the same rule, for example to
+relative abundances or rclr values.
+</dd>
+<dt>TreeSummarizedExperiment (TreeSE)</dt>
+<dd>
+The Bioconductor data container for microbiome data. It holds the
+abundance tables, the taxonomy (<code>rowData</code>), the sample
+information (<code>colData</code>) and the phylogenetic tree
+(<code>rowTree</code>).
+</dd>
+<dt>UniFrac</dt>
+<dd>
+A distance between samples that uses the phylogenetic tree. Unweighted
+UniFrac uses only presence and absence; weighted UniFrac also uses the
+abundances.
+</dd>
+<dt>Unsupervised analysis</dt>
+<dd>
+An analysis that looks for patterns without using the sample
+information, such as ordination or clustering.
+</dd>
+<dt>Wilcoxon test</dt>
+<dd>
+A test of whether two groups differ, based on the ranks of the values.
+It does not assume normally distributed values.
+</dd>
+</dl><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
       </div>
@@ -355,13 +799,13 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "microbiome, metagenomics, Bioconductor, R, mia, TreeSummarizedExperiment, diversity, differential abundance",
   "name": "Reference",
   "creativeWorkStatus": "active",
   "url": "https://microbiome.github.io/microbiome-lesson/instructor/reference.html",
   "identifier": "https://microbiome.github.io/microbiome-lesson/instructor/reference.html",
   "dateCreated": "2026-05-28",
-  "dateModified": "2023-03-16",
+  "dateModified": "2026-10-13",
   "datePublished": "2026-10-13"
 }
 

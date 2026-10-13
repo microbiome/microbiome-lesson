@@ -41,7 +41,7 @@
     <div class="col-md-8">
       <div class="large-logo">
         <a href="index.html">
-        <img id="incubator-logo" alt="Lesson Description" src="assets/images/incubator-logo.svg"></a>
+        <img id="incubator-logo" alt="Microbiome data science with R/Bioconductor" src="assets/images/incubator-logo.svg"></a>
 
         <span class="badge text-bg-danger">
           <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
@@ -100,7 +100,7 @@
     </button>
     <div class="nav-logo">
       <a href="index.html">
-      <img class="small-logo" alt="Lesson Description" src="assets/images/incubator-logo-sm.svg"></a>
+      <img class="small-logo" alt="Microbiome data science with R/Bioconductor" src="assets/images/incubator-logo-sm.svg"></a>
     </div>
     <div class="lesson-title-md">
       Microbiome data science with R/Bioconductor
@@ -244,7 +244,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="alpha-div.html">1. Calculate alpha diversity</a>
+        <a href="01-intro-microbiome.html">1. Introduction to microbiome data</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -256,7 +256,115 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="introduction.html">2. Using Markdown</a>
+        <a href="02-upstream.html">2. From samples to tables</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-setup.html">3. RStudio project and experimental data</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-import-treese.html">4. Importing data into TreeSummarizedExperiment</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-explore-prepare.html">5. Exploring and preparing microbiome data</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-alpha-diversity.html">6. Alpha diversity</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07-beta-diversity.html">7. Beta diversity</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="08-differential-abundance.html">8. Differential abundance and prevalence analysis</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="09-machine-learning.html">9. Machine learning: predicting an outcome</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush11">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading11">
+        <a href="10-capstone.html">10. Capstone: analyse a new dataset</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush12">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading12">
+        <a href="11-next-steps.html">11. Next steps</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -338,22 +446,213 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Key Points</h1>
         
-<section id="alpha-div"><h2 class="section-heading"><a href="alpha-div.html">Calculate alpha diversity</a></h2>
+<section id="01-intro-microbiome"><h2 class="section-heading"><a href="01-intro-microbiome.html">Introduction to microbiome data</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>addAlpha</code> function to calculate the alpha
-diversity</li>
-</ul></section><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Using Markdown</a></h2>
+<li>A microbiome study goes from data generation and pre-processing to
+the data object, data processing and statistical analysis. This lesson
+covers the data object, data processing and statistical analysis steps;
+data integration is covered in the follow-up multi-omics lesson.</li>
+<li>Microbiome data consists of an abundance table (taxa × samples),
+taxonomy, sample information and often a phylogenetic tree.</li>
+<li>The number of reads per sample depends on sequencing depth, so we
+usually compare relative abundances.</li>
+<li>Relative abundances are compositional: they add up to 100 %, so a
+change in one taxon changes the shares of all others.</li>
+<li>Microbiome data contains many zeros and many more taxa than
+samples.</li>
+<li>Alpha diversity, beta diversity and differential abundance are the
+standard first analyses of a microbiome study, and for some studies they
+are enough.</li>
+<li>This lesson follows one study, on colorectal cancer, from data to
+results. Other differences between the groups, such as where people
+live, can confound the comparison.</li>
+</ul></section><section id="02-upstream"><h2 class="section-heading"><a href="02-upstream.html">From samples to tables</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Choices made during data generation, such as sample storage, DNA
+extraction and batches, leave a mark on the data. Read how the samples
+were collected and processed before you analyse them.</li>
+<li>Pre-processing turns raw reads (FASTQ files) into tables of taxa. It
+is usually done outside R, before the analysis that this lesson
+covers.</li>
+<li>The numbers in the abundance table describe the sequenced DNA, and
+their total depends on the sequencing depth.</li>
+<li>The outputs go into the parts of a TreeSE: the abundance table into
+<code>assay</code>, the taxonomy into <code>rowData</code>, the sample
+information into <code>colData</code> and the tree into
+<code>rowTree</code>.</li>
+<li>mia has import functions, such as <code>importQIIME2()</code>,
+<code>importMetaPhlAn()</code> and <code>convertFromPhyloseq()</code>,
+that build a TreeSE directly from pipeline output.</li>
+</ul></section><section id="03-setup"><h2 class="section-heading"><a href="03-setup.html">RStudio project and experimental data</a></h2>
+<hr class="half-width">
+<ul>
+<li>Use an RStudio project to keep the data, code and results of an
+analysis together.</li>
+<li>Use <code>download.file()</code> to download data from the internet,
+and <code>file.path()</code> to build file paths.</li>
+<li>The main packages of this lesson are mia and miaViz from the OMA
+framework; later episodes also use ape, scater, bluster, daa, maaslin3
+and mikropml.</li>
+</ul></section><section id="04-import-treese"><h2 class="section-heading"><a href="04-import-treese.html">Importing data into TreeSummarizedExperiment</a></h2>
+<hr class="half-width">
+<ul>
+<li>A <code>TreeSummarizedExperiment</code> keeps the abundance table,
+taxonomy, sample information and tree together and in sync.</li>
+<li>Rows are taxa and columns are samples.</li>
+<li>
+<code>assay()</code>, <code>rowData()</code> and
+<code>colData()</code> access the abundance table, the taxonomy and the
+sample information.</li>
+<li>Subsetting with <code>[rows, columns]</code> keeps all parts of the
+object in sync.</li>
+<li>
+<code>plotBarplot()</code> gives a quick overview of the study
+groups. In our study, the groups differ in more than disease: most
+healthy people come from Bhopal.</li>
+</ul></section><section id="05-explore-prepare"><h2 class="section-heading"><a href="05-explore-prepare.html">Exploring and preparing microbiome data</a></h2>
+<hr class="half-width">
+<ul>
+<li>Library sizes differ between samples, so we compare relative values
+instead of raw counts.</li>
+<li>
+<code>agglomerateByRank()</code> combines taxa into a higher
+taxonomic rank.</li>
+<li>(Bonus) <code>agglomerateByRanks()</code> stores the data at every
+rank as alternative experiments in one object; <code>altExp()</code>
+picks one, and <code>swapAltExp()</code> makes one the main data.</li>
+<li>
+<code>transformAssay()</code> adds transformed tables, such as
+relative abundance and robust CLR (rclr), and keeps the original
+counts.</li>
+<li>rclr compares each taxon to the average taxon of its sample on a log
+scale. It fills in the zeros with estimates, so single rclr values are
+estimates, not measurements.</li>
+<li>Which table to use depends on the method and its assumptions. The
+rclr values are closer to a normal distribution than the counts.</li>
+<li>
+<code>plotAbundance()</code> shows the community composition of each
+sample, and <code>plotBoxplot()</code> the abundance of a single taxon
+by group.</li>
+<li>
+<code>subsetByPrevalent()</code> removes rare taxa. Use it for
+differential abundance, but not for diversity.</li>
+<li>In our study, one species, <em>Prevotella copri</em>, dominates the
+gut of many healthy people.</li>
+</ul></section><section id="06-alpha-diversity"><h2 class="section-heading"><a href="06-alpha-diversity.html">Alpha diversity</a></h2>
+<hr class="half-width">
+<ul>
+<li>Alpha diversity describes the diversity within a sample: richness
+(how many taxa), evenness (how equal), both (Shannon), or the share of
+the tree of life covered (Faith). The indices give complementary
+information.</li>
+<li>
+<code>addAlpha()</code> calculates diversity indices and adds them
+to <code>colData</code>.</li>
+<li>
+<code>plotBoxplot()</code> and <code>daa::getWilcoxonTest()</code>
+compare alpha diversity between two groups. The Wilcoxon test does not
+assume normally distributed values.</li>
+<li>In our study, people with CRC have a higher diversity, partly
+because the gut of many healthy people is dominated by one species.
+Higher diversity is not automatically healthier.</li>
+<li>Check for confounding: in our study, the CRC patients are also older
+than the healthy people.</li>
+</ul></section><section id="07-beta-diversity"><h2 class="section-heading"><a href="07-beta-diversity.html">Beta diversity</a></h2>
+<hr class="half-width">
+<ul>
+<li>Beta diversity compares whole communities between samples, using a
+dissimilarity such as Bray–Curtis.</li>
+<li>
+<code>addMDS()</code> calculates a PCoA from any dissimilarity,
+<code>runPCA()</code> a PCA from rclr values, and
+<code>plotOrdination()</code> draws them as a map of the samples. PCA
+and PCoA are complementary, and PCA loadings show which taxa drive the
+axes.</li>
+<li>UniFrac uses the phylogenetic tree, so that closely related taxa
+count as similar. Unweighted UniFrac uses presence and absence; weighted
+UniFrac also uses the abundances.</li>
+<li>PERMANOVA (<code>getPERMANOVA()</code>) tests whether groups differ
+in composition; R2 tells how much of the differences the group explains.
+Always check whether the groups differ in spread, because this affects
+the PERMANOVA result.</li>
+<li>dbRDA (<code>addRDA()</code>) takes other variables into account,
+which is important when groups differ in more than one way.</li>
+<li>(Bonus) Clustering (<code>addCluster()</code>) finds groups of
+similar samples without using the sample information. Cluster the data
+itself, never the ordination axes, and use the ordination only to show
+the clusters.</li>
+<li>In our study, the gut microbiome of people with CRC differs from
+that of healthy people, even when the location is taken into account.
+The samples fall into a <em>Prevotella</em> and a
+non-<em>Prevotella</em> community type, which is strongly linked to the
+disease.</li>
+</ul></section><section id="08-differential-abundance"><h2 class="section-heading"><a href="08-differential-abundance.html">Differential abundance and prevalence analysis</a></h2>
+<hr class="half-width">
+<ul>
+<li>Differential abundance analysis tests whether the differences we see
+in plots are statistically significant.</li>
+<li>At its core, DAA is a simple test: a t-test is a linear model with
+one two-group variable, and a linear model can add covariates, such as
+the location. Most DAA methods are based on this under the hood.</li>
+<li>Testing many taxa produces false positives, so we use q-values that
+are corrected for multiple testing.</li>
+<li>Dedicated methods, such as MaAsLin 3, extend the linear model to
+take the specific nature of microbiome data into account: relative
+values, many zeros and noisy abundances.</li>
+<li>A taxon can differ in abundance, in prevalence (how often it is
+present), or both. MaAsLin 3 tests both.</li>
+<li>Look at the data behind the results, and treat significant taxa as
+candidates for further study.</li>
+<li>In our study, <em>Prevotella copri</em> and butyrate-producing
+species are less abundant in people with CRC, and <em>Flavonifractor
+plautii</em> is found much more often in CRC.</li>
+</ul></section><section id="09-machine-learning"><h2 class="section-heading"><a href="09-machine-learning.html">Machine learning: predicting an outcome</a></h2>
+<hr class="half-width">
+<ul>
+<li>Machine learning asks how well we can <em>predict</em> an outcome,
+such as a disease, from features, such as taxon abundances.</li>
+<li>Always evaluate a model on samples it has not seen: cross-validation
+on the training data and a separate test set.</li>
+<li>Hyperparameters, such as <code>mtry</code> of a random forest, are
+chosen by cross-validation on the training data only.</li>
+<li>mikropml works directly with a TreeSE: <code>run_ml()</code> trains,
+tunes and tests a model in one call, and <code>preprocess_data()</code>
+prepares the data when a model needs it. Random forests work on raw
+counts.</li>
+<li>The AUC measures how well the predictions separate the groups. With
+a small test set, it varies a lot between random splits.</li>
+<li>Feature importance shows which taxa the model relies on. In our
+study, many of them, such as <em>Roseburia faecis</em>, also differ in
+abundance.</li>
+<li>Confounders and small sample sizes can make a model look better than
+it is; independent validation is needed.</li>
+</ul></section><section id="10-capstone"><h2 class="section-heading"><a href="10-capstone.html">Capstone: analyse a new dataset</a></h2>
+<hr class="half-width">
+<ul>
+<li>The same workflow (explore, alpha diversity, beta diversity,
+differential abundance) works for new datasets, including amplicon
+data.</li>
+<li>With real read counts and very different library sizes, rarefaction
+is an option for richness.</li>
+<li>Include technical variables such as the cohort or batch in the
+models.</li>
+<li>Non-significant results are results too. Report them together with
+the sample size and the limitations.</li>
+<li>A short written report forces you to state the question, the
+methods, the results and the limitations clearly.</li>
+</ul></section><section id="11-next-steps"><h2 class="section-heading"><a href="11-next-steps.html">Next steps</a></h2>
+<hr class="half-width">
+<ul>
+<li>A typical microbiome analysis goes from import and preparation to
+alpha diversity, beta diversity and differential abundance.</li>
+<li>These three analyses are what most studies report. They are
+sometimes enough on their own, and they are always the first steps
+before more advanced analyses.</li>
+<li>The OMA book is the place to continue learning, and the follow-up
+multi-omics lesson shows how to combine the microbiome with other data
+types.</li>
 </ul></section>
 </div>
     </main>
@@ -398,7 +697,7 @@ locally</li>
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "microbiome, metagenomics, Bioconductor, R, mia, TreeSummarizedExperiment, diversity, differential abundance",
   "name": "Key Points",
   "creativeWorkStatus": "active",
   "url": "https://microbiome.github.io/microbiome-lesson/key-points.html",

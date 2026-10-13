@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/01-intro-microbiome.html</loc>
+  </url>
+  <url>
     <loc>https://microbiome.github.io/microbiome-lesson/01-introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/02-upstream.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/03-setup.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/04-import-treese.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/05-explore-prepare.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/06-alpha-diversity.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/07-beta-diversity.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/08-differential-abundance.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/09-machine-learning.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/10-capstone.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/11-next-steps.html</loc>
   </url>
   <url>
     <loc>https://microbiome.github.io/microbiome-lesson/404.html</loc>
@@ -28,7 +61,40 @@
     <loc>https://microbiome.github.io/microbiome-lesson/index.html</loc>
   </url>
   <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/01-intro-microbiome.html</loc>
+  </url>
+  <url>
     <loc>https://microbiome.github.io/microbiome-lesson/instructor/01-introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/02-upstream.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/03-setup.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/04-import-treese.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/05-explore-prepare.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/06-alpha-diversity.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/07-beta-diversity.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/08-differential-abundance.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/09-machine-learning.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/10-capstone.html</loc>
+  </url>
+  <url>
+    <loc>https://microbiome.github.io/microbiome-lesson/instructor/11-next-steps.html</loc>
   </url>
   <url>
     <loc>https://microbiome.github.io/microbiome-lesson/instructor/404.html</loc>

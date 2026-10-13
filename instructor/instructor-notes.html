@@ -41,7 +41,7 @@
     <div class="col-md-8">
       <div class="large-logo">
         <a href="index.html">
-        <img id="incubator-logo" alt="Lesson Description" src="../assets/images/incubator-logo.svg"></a>
+        <img id="incubator-logo" alt="Microbiome data science with R/Bioconductor" src="../assets/images/incubator-logo.svg"></a>
 
         <span class="badge text-bg-danger">
           <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
@@ -100,7 +100,7 @@
     </button>
     <div class="nav-logo">
       <a href="index.html">
-      <img class="small-logo" alt="Lesson Description" src="../assets/images/incubator-logo-sm.svg"></a>
+      <img class="small-logo" alt="Microbiome data science with R/Bioconductor" src="../assets/images/incubator-logo-sm.svg"></a>
     </div>
     <div class="lesson-title-md">
       Microbiome data science with R/Bioconductor
@@ -245,7 +245,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="alpha-div.html">1. Calculate alpha diversity</a>
+        <a href="01-intro-microbiome.html">1. Introduction to microbiome data</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -257,7 +257,115 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="introduction.html">2. Using Markdown</a>
+        <a href="02-upstream.html">2. From samples to tables</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-setup.html">3. RStudio project and experimental data</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-import-treese.html">4. Importing data into TreeSummarizedExperiment</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-explore-prepare.html">5. Exploring and preparing microbiome data</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-alpha-diversity.html">6. Alpha diversity</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07-beta-diversity.html">7. Beta diversity</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="08-differential-abundance.html">8. Differential abundance and prevalence analysis</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="09-machine-learning.html">9. Machine learning: predicting an outcome</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush11">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading11">
+        <a href="10-capstone.html">10. Capstone: analyse a new dataset</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush12">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading12">
+        <a href="11-next-steps.html">11. Next steps</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -341,24 +449,212 @@
         <h1>Instructor Notes</h1>
         
 
-<p>This is a placeholder file. Please add content here.</p>
+<section><h2 class="section-heading" id="general">General<a class="anchor" aria-label="anchor" href="#general"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>The lesson takes about 15 hours of teaching and exercises (see the
+front matter of each episode), so it fits a course of about 20 hours
+with lectures. Multi-table (multi-omics) analysis is covered by the
+follow-up <a href="https://microbiome.github.io/multiomics-lesson/" class="external-link">multi-omics
+lesson</a>.</li>
+<li>Most of the time should be hands-on. Episodes 5–8 end with a
+30-minute consolidation exercise, and the capstone (episode 10) is a
+50-minute independent analysis. These are the flexible parts: shorten
+them if time runs out.</li>
+<li>Sections and challenges marked <strong>bonus</strong> (all taxonomic
+ranks in one object in episode 5, clustering in episode 7) are optional.
+Later episodes do not depend on them.</li>
+<li>Episodes 1 and 2 have no code to type. Use them to motivate the
+learners, walk through the workflow figure, introduce the study and
+discuss what to keep in mind about data generation. Episode 3 can be
+skipped if the learners have set up the project and downloaded the data
+before the workshop.</li>
+<li>The episodes build on each other through the files
+<code>data/tse.rds</code> (saved in episode 4) and
+<code>data/tse_processed.rds</code> (saved in episode 5, with the
+<code>relabundance</code> and <code>rclr</code> tables). If a learner
+falls behind, they can catch up by running the “save” chunks of the
+earlier episodes.</li>
+<li>Live-code every chunk. The chunks are kept short on purpose.</li>
+</ul></section><section><h2 class="section-heading" id="the-story-of-the-lesson">The story of the lesson<a class="anchor" aria-label="anchor" href="#the-story-of-the-lesson"></a>
+</h2>
+<hr class="half-width">
+<p>All episodes follow the same research question: <em>is the gut
+microbiome of people with colorectal cancer (CRC) different from that of
+healthy people, and which bacteria differ?</em> Two threads connect the
+episodes. Point them out as you go.</p>
+<p><strong>The <em>Prevotella copri</em> thread</strong></p>
+<ul>
+<li>Episode 5: <em>Prevotella</em> dominates many healthy samples in the
+composition plot. The median relative abundance of <em>P. copri</em> is
+about 47 % in healthy people and about 1 % in CRC.</li>
+<li>Episode 6: CRC patients have <em>higher</em> alpha diversity. This
+surprises many learners. The explanation is that the healthy samples are
+dominated by <em>P. copri</em> and are therefore less even. Use this to
+discuss that “higher diversity” is not automatically “healthier”.</li>
+<li>Episode 7: <em>P. copri</em> drives the separation along the first
+PCoA axis.</li>
+<li>Episode 8: <em>P. copri</em> is the strongest MaAsLin 3 result. In
+the simple linear model on two taxa, its effect weakens when the
+location is added (most people from Kerala have CRC), which shows why
+covariates matter.</li>
+</ul>
+<p><strong>The location thread (confounding)</strong></p>
+<ul>
+<li>Episode 1 (challenge 4) introduces the idea of confounding, and
+episode 2 (challenge 1) the related idea of batch effects.</li>
+<li>Episode 4 (challenge 4): CRC patients come from both Bhopal (a city)
+and Kerala (a state) (15/15), but healthy people come mostly from Bhopal
+(26/4). The lesson calls this variable “location”.</li>
+<li>Episode 6 (challenge 6) and episode 7 (challenge 7): age is also
+linked to the disease (there are no CRC patients under 40). The disease
+effect on the composition remains when age is added to the dbRDA.
+Challenge 7 also shows that the order of the variables does not matter
+in <code>addRDA()</code>, because each variable is tested while the
+others are taken into account.</li>
+<li>Episode 7: the PCoA coloured by location looks similar to the one
+coloured by disease. dbRDA shows that the disease effect remains when
+the location is included.</li>
+<li>Episode 8: the location is included in the models. Challenge 3 shows
+that leaving it out changes the list of significant species.</li>
+</ul>
+<p><strong>Beyond the core analyses</strong></p>
+<ul>
+<li>Episode 7 (bonus, clustering): hierarchical clustering on rclr
+values finds a <em>Prevotella</em> and a non-<em>Prevotella</em>
+community type, which almost matches the disease groups. Stress the
+callout: cluster the data, not the ordination axes.</li>
+<li>Episode 8: <em>Flavonifractor plautii</em>, named in the title of
+the Gupta paper, is the clearest prevalence result.</li>
+<li>Episode 9: the test set has only 12 samples, so the test AUC jumps
+between random splits. The challenge makes this visible.</li>
+<li>Episode 10 (capstone, <code>Tengeler2020</code>): the results are
+mostly null. This is intended: not every study finds a difference.</li>
+</ul></section><section><h2 class="section-heading" id="differential-abundance-in-this-lesson">Differential abundance in this lesson<a class="anchor" aria-label="anchor" href="#differential-abundance-in-this-lesson"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>Episode 8 first shows the idea of DAA on two taxa
+(<code>tse_sub</code>): a box plot, a t-test and a linear model on log10
+relative abundances (pseudocount 1 added to the counts), with simple
+functions from the daa package. A Student’s t-test
+(<code>var.equal = TRUE</code>) gives exactly the same p-values as a
+linear model with one two-group variable. Adding the location as a
+covariate shows what most DAA methods do under the hood. A large
+benchmark found that such simple methods give the most replicable
+results (<a href="https://doi.org/10.1093/bib/bbaf130" class="external-link">Pelto et
+al. 2025</a>).</li>
+<li>After multiple testing, the episode moves to a dedicated method,
+MaAsLin 3, for all taxa. Its abundance model uses only the samples where
+a taxon is present, and its prevalence model tests presence and absence.
+This is why <em>P. copri</em> is only weakly significant in the simple
+linear model with location (where the zeros are included), but the
+strongest result of MaAsLin 3.</li>
+<li>daa is installed from GitHub and is not loaded with
+<code>library()</code>; the lesson calls its functions with
+<code>daa::</code>. The current version has a bug: once the daa
+namespace is loaded, <code>getPERMANOVA()</code> fails in the same R
+session with <code>subscript out of bounds</code>. If this happens, for
+example in the capstone, restart R and run the earlier steps again.</li>
+<li>MaAsLin 3 writes its files to the <code>maaslin3_output</code>
+folder in the project, and creates it if needed. One of its steps uses
+random numbers, so learners’ q-values can differ slightly from the
+lesson.</li>
+</ul></section><section><h2 class="section-heading" id="notes-on-the-data">Notes on the data<a class="anchor" aria-label="anchor" href="#notes-on-the-data"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>The data comes from shotgun metagenomics profiled with MetaPhlAn,
+through the curatedMetagenomicData package. The “counts” are estimated
+from MetaPhlAn’s relative abundances, not real read counts. For this
+reason, the lesson does not rarefy the data and shows no rarefaction
+curves. Episode 6 mentions rarefaction only in a callout.</li>
+<li>The <code>rclr</code> transformation (vegan’s
+<code>decostand(method = "rclr")</code>, used by mia) fills in the zeros
+by OptSpace matrix completion. By default it returns the full low-rank
+(rank 3) reconstruction, not just the filled-in zeros. The PCA in
+episode 7 therefore has only three non-zero components, and single-taxon
+rclr values are smoothed. For this reason, the lesson plots single taxa
+as relative abundances, and episode 8 tests log relative abundances.
+Episode 5 (challenge 4) shows learners that zero counts get non-zero
+rclr values; use it to explain that rclr values are estimates.</li>
+<li>Some taxon names look odd, for example
+<code>species-_rectale</code>, which is <em>Eubacterium rectale</em>
+(the genus name contains brackets in the original taxonomy). This comes
+from the original data.</li>
+<li>The data is shipped in <code>episodes/data/</code>; see the README
+there for its source.</li>
+</ul></section><section><h2 class="section-heading" id="common-problems">Common problems<a class="anchor" aria-label="anchor" href="#common-problems"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>
+<strong>Package versions.</strong> The lesson needs the current
+Bioconductor release. Check with <code>BiocManager::version()</code>.
+The lesson is rendered with Bioconductor devel.</li>
+<li>
+<strong>File not found.</strong> Learners must open the RStudio
+project (episode 3) so that the working directory is correct. Check with
+<code>getwd()</code>.</li>
+<li>
+<strong>Harmless warnings.</strong>
+<ul>
+<li>
+<code>agglomerateByRank()</code> and
+<code>agglomerateByRanks()</code> warn that
+<code>'rclr' includes negative values</code> when the data already has
+an rclr table. Episode 5 uses this to teach “agglomerate first, then
+transform”.</li>
+</ul>
+</li>
+<li>
+<strong>Random numbers.</strong> PERMANOVA, dbRDA, MaAsLin 3,
+k-means and the train/test split use random numbers, so learners’
+p-values can differ slightly from the lesson. This is expected; the
+conclusions do not change.</li>
+<li>
+<strong>Run time.</strong> Episode 9 takes about a minute; challenge
+2 trains three more random forests.</li>
+<li>
+<strong>Masked functions.</strong> Loading mikropml (through caret)
+masks <code>mia::cluster()</code>. Load mia last, or call
+<code>mia::cluster()</code> explicitly, if both are needed in one
+session.</li>
+</ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-
-
-      <section id="aggregate-instructor-notes"><section id="alpha-div"><h2 class="section-heading"><a href="alpha-div.html">Calculate alpha diversity</a></h2>
-<hr class="half-width"></section><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Using Markdown</a></h2>
+ --></section><section id="aggregate-instructor-notes"><section id="01-intro-microbiome"><h2 class="section-heading"><a href="01-intro-microbiome.html">Introduction to microbiome data</a></h2>
+<hr class="half-width"></section><section id="02-upstream"><h2 class="section-heading"><a href="02-upstream.html">From samples to tables</a></h2>
+<hr class="half-width"></section><section id="03-setup"><h2 class="section-heading"><a href="03-setup.html">RStudio project and experimental data</a></h2>
+<hr class="half-width"></section><section id="04-import-treese"><h2 class="section-heading"><a href="04-import-treese.html">Importing data into TreeSummarizedExperiment</a></h2>
+<hr class="half-width"></section><section id="05-explore-prepare"><h2 class="section-heading"><a href="05-explore-prepare.html">Exploring and preparing microbiome data</a></h2>
 <hr class="half-width">
-<h3 id="introduction-headingInstructor1">
-<a href="introduction.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#introduction-headingInstructor1"></a>
+<h3 id="05-explore-prepare-headingInstructor1">
+<a href="05-explore-prepare.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#05-explore-prepare-headingInstructor1"></a>
 </h3>
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
+<p><code>plotAbundance()</code> may print a warning such as
+<code>Removed 355 rows containing missing values</code>. It is harmless:
+the plot does not draw bars for taxa with zero abundance.</p>
 <hr>
-<br></section></section>
+<br></section><section id="06-alpha-diversity"><h2 class="section-heading"><a href="06-alpha-diversity.html">Alpha diversity</a></h2>
+<hr class="half-width"></section><section id="07-beta-diversity"><h2 class="section-heading"><a href="07-beta-diversity.html">Beta diversity</a></h2>
+<hr class="half-width"></section><section id="08-differential-abundance"><h2 class="section-heading"><a href="08-differential-abundance.html">Differential abundance and prevalence analysis</a></h2>
+<hr class="half-width"></section><section id="09-machine-learning"><h2 class="section-heading"><a href="09-machine-learning.html">Machine learning: predicting an outcome</a></h2>
+<hr class="half-width">
+<h3 id="09-machine-learning-headingInstructor1">
+<a href="09-machine-learning.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#09-machine-learning-headingInstructor1"></a>
+</h3>
+<p><code>run_ml()</code> takes a few seconds. It loads the caret
+package, which masks some functions, for example
+<code>mia::cluster()</code>. This does not matter in this episode, but
+in a session that also uses clustering, call such functions with
+<code>mia::</code> in front.</p>
+<hr>
+<br></section><section id="10-capstone"><h2 class="section-heading"><a href="10-capstone.html">Capstone: analyse a new dataset</a></h2>
+<hr class="half-width"></section><section id="11-next-steps"><h2 class="section-heading"><a href="11-next-steps.html">Next steps</a></h2>
+<hr class="half-width"></section></section>
 </div>
     </main>
 </div>
@@ -402,7 +698,7 @@ View”</p>
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "microbiome, metagenomics, Bioconductor, R, mia, TreeSummarizedExperiment, diversity, differential abundance",
   "name": "Instructor Notes",
   "creativeWorkStatus": "active",
   "url": "https://microbiome.github.io/microbiome-lesson/instructor/instructor-notes.html",
