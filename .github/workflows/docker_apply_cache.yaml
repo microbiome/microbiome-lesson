@@ -153,6 +153,13 @@ jobs:
           library(sandpaper)
         shell: Rscript {0}
 
+      - name: "Install Extra System Dependencies"
+        run: |
+          # GSL is needed by DirichletMultinomial (dependency of mia), but is
+          # not detected by the workbench system requirement check
+          apt-get update && apt-get install -y libgsl-dev
+        shell: bash
+
       - name: "Setup Lesson Dependencies"
         run: |
           Rscript /home/rstudio/.workbench/setup_lesson_deps.R

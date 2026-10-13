@@ -116,6 +116,13 @@ jobs:
           git config --global --add safe.directory $(pwd)
         shell: bash
 
+      - name: "Install Extra System Dependencies"
+        run: |
+          # GSL is needed by DirichletMultinomial (dependency of mia), but is
+          # not detected by the workbench system requirement check
+          apt-get update && apt-get install -y libgsl-dev
+        shell: bash
+
       - name: "Setup Lesson Dependencies"
         id: build-container-deps
         uses: carpentries/actions/build-container-deps@main
