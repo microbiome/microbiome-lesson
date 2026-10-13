@@ -49,3 +49,9 @@ docs/
 # translation temp files
 po/*~
 
+
+# Objects created when building the lesson
+episodes/data/*.rds
+episodes/maaslin3_output*/
+Rplots.pdf
+episodes/figure/

@@ -1,0 +1,163 @@
+---
+source: Rmd
+title: "RStudio project and experimental data"
+teaching: 15
+exercises: 10
+---
+
+:::::::::::::::::::::::::::::::::::::: questions
+
+- How do I organize my work for this lesson?
+- How do I get the data used in this lesson?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Create an RStudio project with a folder for the data.
+- Download the lesson data.
+- Check that the required packages are installed.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Create an RStudio project
+
+It is good practice to keep all files of one analysis in one folder. An
+**RStudio project** helps with this: when you open the project, R
+automatically uses the project folder as its *working directory*. All file
+paths in this lesson are relative to this folder.
+
+1. In RStudio, choose *File* → *New Project* → *New Directory* → *New Project*.
+2. Name the project `microbiome-lesson` and choose where to save it.
+3. Click *Create Project*.
+
+Next, create a folder called `data` inside the project for the input files.
+You can use the *New Folder* button in the *Files* pane, or run:
+
+```{r create-dirs, eval=FALSE}
+dir.create("data")
+```
+
+Finally, open a new R script (*File* → *New File* → *R Script*) and save it
+in the project folder, for example as `microbiome-analysis.R`. Write the code
+of the following episodes into this script, so that you can run it again
+later.
+
+:::::::::::::::::::::::::::::::::::::::: prereq
+
+## New to R and RStudio?
+
+This lesson assumes you know the basics of R and RStudio. If you need a
+refresher, see the
+[Introduction to data analysis with R and Bioconductor](https://carpentries-incubator.github.io/bioc-intro/)
+lesson.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Download the data
+
+The data consists of the four parts of a microbiome dataset (see
+[episode 1](01-intro-microbiome.Rmd)), each in its own file:
+
+| File | Content |
+|---|---|
+| `taxonomy_abundance.csv` | Abundance table: taxa × samples |
+| `taxonomy_table.csv` | Taxonomy of each taxon |
+| `sample_metadata.csv` | Information about each sample |
+| `phylogeny.tree` | Phylogenetic tree of the taxa |
+
+We download them into the `data` folder with `download.file()`. Here is the
+first one:
+
+```{r download-first, eval=FALSE}
+download.file(
+    url = "https://raw.githubusercontent.com/microbiome/microbiome-lesson/main/episodes/data/taxonomy_abundance.csv",
+    destfile = file.path("data", "taxonomy_abundance.csv")
+)
+```
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## File paths with `file.path()`
+
+The function `file.path()` joins folder and file names into a path:
+`file.path("data", "taxonomy_abundance.csv")` gives
+`"data/taxonomy_abundance.csv"`. Forward slashes work on Windows, macOS and
+Linux alike, but `file.path()` saves you from typing the separators yourself,
+so we use it for all file paths in this lesson.
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 1: Download the other files
+
+Download the remaining three files (`taxonomy_table.csv`,
+`sample_metadata.csv` and `phylogeny.tree`) into the `data` folder. Then
+check that all four files are there.
+
+:::::::::::::::::::::::: solution
+
+```{r download-rest, eval=FALSE}
+url <- "https://raw.githubusercontent.com/microbiome/microbiome-lesson/main/episodes/data/"
+
+download.file(paste0(url, "taxonomy_table.csv"), file.path("data", "taxonomy_table.csv"))
+download.file(paste0(url, "sample_metadata.csv"), file.path("data", "sample_metadata.csv"))
+download.file(paste0(url, "phylogeny.tree"), file.path("data", "phylogeny.tree"))
+
+list.files("data")
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Check the packages
+
+We use these packages:
+
+| Package | Used for | Episodes |
+|---|---|---|
+| **mia** | Microbiome analysis | all |
+| **miaViz** | Microbiome visualization | all |
+| **ape** | Reading the phylogenetic tree | 4 |
+| **scater** | Principal component analysis (PCA) | 7 |
+| **bluster** | Clustering | 7, 10 |
+| **daa** | Simple statistical tests (Wilcoxon test, t-test, linear model) | 5, 6, 8 |
+| **maaslin3** | Differential abundance and prevalence | 8, 10 |
+| **mikropml** | Machine learning | 9 |
+
+mia, miaViz and daa belong to the OMA framework. Each episode loads the packages
+it needs with `library()`.
+
+If you followed the [setup instructions](../learners/setup.md), the packages
+are already installed. Check that they load without errors:
+
+```{r load-packages, message=FALSE, warning=FALSE}
+library(mia)
+library(miaViz)
+library(ape)
+library(scater)
+library(bluster)
+library(maaslin3)
+library(mikropml)
+```
+
+We do not load the daa package with `library()`. Instead, we call its
+functions with `daa::` in front, as in `daa::getLm()`. Check that it is
+installed by asking for its version:
+
+```{r check-daa}
+packageVersion("daa")
+```
+
+Messages are normal. If you see an error such as
+`there is no package called 'mia'`, go back to the
+[setup instructions](../learners/setup.md).
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Use an RStudio project to keep the data, code and results of an analysis together.
+- Use `download.file()` to download data from the internet, and `file.path()` to build file paths.
+- The main packages of this lesson are mia and miaViz from the OMA framework; later episodes also use ape, scater, bluster, daa, maaslin3 and mikropml.
+
+::::::::::::::::::::::::::::::::::::::::::::::::

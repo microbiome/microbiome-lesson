@@ -15,7 +15,7 @@
 carpentry: 'incubator'
 
 # Alt-text description of the lesson.
-carpentry_description: 'Lesson Description'
+carpentry_description: 'Microbiome data science with R/Bioconductor'
 
 # Overall title for pages.
 title: 'Microbiome data science with R/Bioconductor'
@@ -24,7 +24,7 @@ title: 'Microbiome data science with R/Bioconductor'
 created: 2026-05-28
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'microbiome, metagenomics, Bioconductor, R, mia, TreeSummarizedExperiment, diversity, differential abundance'
 
 # Life cycle stage of the lesson
 # refer to <https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html> for details
@@ -66,18 +66,31 @@ contact: 'tvborm@utu.fi'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
-- alpha-div.md
-- introduction.md
+episodes:
+- 01-intro-microbiome.Rmd
+- 02-upstream.Rmd
+- 03-setup.Rmd
+- 04-import-treese.Rmd
+- 05-explore-prepare.Rmd
+- 06-alpha-diversity.Rmd
+- 07-beta-diversity.Rmd
+- 08-differential-abundance.Rmd
+- 09-machine-learning.Rmd
+- 10-capstone.Rmd
+- 11-next-steps.Rmd
 
 # Information for Learners
-learners: 
+learners:
+- setup.md
+- reference.md
 
 # Information for Instructors
-instructors: 
+instructors:
+- instructor-notes.md
 
 # Learner Profiles
-profiles: 
+profiles:
+- learner-profiles.md
 
 # Customisation ---------------------------------------------
 #
