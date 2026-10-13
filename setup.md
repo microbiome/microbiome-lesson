@@ -2,53 +2,90 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
+## Software
 
-## Data Sets
+This lesson uses R and RStudio, together with a few R/Bioconductor packages.
 
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
+1. Install the newest version of **R** from
+   [CRAN](https://cran.r-project.org/).
+2. Install **RStudio Desktop** from
+   [Posit](https://posit.co/download/rstudio-desktop/).
 
-## Software Setup
+For more detailed instructions, see the setup page of the
+[Introduction to data analysis with R and Bioconductor](https://carpentries-incubator.github.io/bioc-intro/#setup)
+lesson.
 
-::::::::::::::::::::::::::::::::::::::: discussion
+## Packages
 
-### Details
+The lesson uses R packages from [Bioconductor](https://bioconductor.org/) and
+[CRAN](https://cran.r-project.org/). We install them in two steps. Run the
+commands below in the RStudio console. The installation can take several
+minutes. If R asks whether to install a package from source, you can answer
+`no`.
 
-Setup for different systems can be presented in dropdown menus via a `spoiler`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+**1. Bioconductor and CRAN packages.** Bioconductor packages are installed
+with the BiocManager package, which also installs packages from CRAN. First
+install BiocManager itself, then the packages:
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+```r
+install.packages("BiocManager")
 
-:::::::::::::::: spoiler
+BiocManager::install(c(
+    "mia",       # microbiome data analysis
+    "miaViz",    # microbiome data visualization
+    "scater",    # principal component analysis
+    "maaslin3",  # differential abundance analysis
+    "bluster",   # clustering
+    "mikropml",  # machine learning
+    "ape",       # phylogenetic trees
+    "remotes"    # installing packages from GitHub (step 2)
+))
+```
 
-### Windows
+The lesson needs the current Bioconductor release. You can check your
+version with:
 
-Use PuTTY
+```r
+BiocManager::version()
+```
 
-::::::::::::::::::::::::
+If BiocManager says that your version is out of date, update R to the newest
+release and run the installation again.
 
-:::::::::::::::: spoiler
+**2. A package from GitHub.** The daa package, which we use to show the
+idea of differential abundance analysis, is new and is not yet part of
+Bioconductor. Packages
+that are still in development are often shared on GitHub. The remotes
+package installs them:
 
-### MacOS
+```r
+remotes::install_github("microbiome/daa")
+```
 
-Use Terminal.app
+Finally, check that the main packages load and that daa is installed:
 
-::::::::::::::::::::::::
+```r
+library(mia)
+library(miaViz)
+library(maaslin3)
+packageVersion("daa")
+```
 
+If these commands run without errors, you are ready. Messages about masked
+objects are normal.
 
-:::::::::::::::: spoiler
+::::::::::::::::::::::::::::::::::::: callout
 
-### Linux
+## Problems with the installation?
 
-Use Terminal
+If a package fails to install, check that your R version is recent enough with
+`R.version.string`, and try the installation again. If the problem persists,
+ask for help before the workshop, so that we can solve it together.
 
-::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
+## Data
+
+You do not need to download anything in advance. We download the data
+together in the episode
+[RStudio project and experimental data](../episodes/03-setup.Rmd).

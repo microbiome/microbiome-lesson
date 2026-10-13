@@ -1,0 +1,5 @@
+"feature"	"metadata"	"value"	"name"	"coef"	"null_hypothesis"	"stderr"	"pval_individual"	"qval_individual"	"pval_joint"	"qval_joint"	"error"	"model"	"N"	"N_not_zero"
+"Coprobacter"	"patient_status"	"ADHD"	"patient_statusADHD"	2.98411424807201	-0.0776830268441589	0.280071917314799	1.69093221074057e-05	0.0130539966669172	3.38183582896373e-05	0.0147109858559922	NA	"abundance"	27	12
+"Subdoligranulum_1"	"patient_status"	"ADHD"	"patient_statusADHD"	-2.37809894651527	-0.0776830268441589	0.412676444509878	0.000105934071306102	0.0408905515241553	0.00021185692058474	0.046078880227181	NA	"abundance"	27	20
+"Subdoligranulum_1"	"patient_status"	"ADHD"	"patient_statusADHD"	0.185786341324517	0	0.828686389730125	0.822606516403511	0.959407450273908	0.00021185692058474	0.046078880227181	NA	"prevalence"	27	20
+"Coprobacter"	"patient_status"	"ADHD"	"patient_statusADHD"	-0.00924743537409679	0	0.804615352342575	0.990830123412303	0.998301078128744	3.38183582896373e-05	0.0147109858559922	NA	"prevalence"	27	12
