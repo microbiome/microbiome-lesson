@@ -285,7 +285,7 @@ p_rarefied
 ```
 
 ``` output
-[1] 0.8205819
+[1] 1
 ```
 
 2. None of the indices differ between the groups (Shannon
@@ -293,7 +293,7 @@ p_rarefied
    p = 0.93, Faith
    p = 0.98).
 3. The rarefied richness does not differ either
-   (p = 0.82). The conclusion is the same.
+   (p = 1). The conclusion is the same.
    Rarefying makes the richness values comparable across samples with
    different sequencing depths, which is why it is common for amplicon data.
 
